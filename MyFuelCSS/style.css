@@ -1,0 +1,117 @@
+body {
+    background-color: #666666;
+	  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    background-color: #9437FF;
+    color: white;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    margin: auto;
+    top: 20px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+}
+
+h2 {
+    color: #9437FF;
+}
+
+h4 {
+    background-color: #9437FF;
+    color: white;
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    top: 20px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+}
+
+h6 {
+    background-color: #9437FF;
+    color: white;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    margin: auto;
+    top: 20px;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+}
+
+label {
+    color: #9437FF;
+}
+
+.InputForm {
+    position: absolute;
+    background-color: white;
+    margin: auto;
+    top: 20px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    border: 0 solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.988418);
+}
+
+.center-div {
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.Labelvalue {
+    color: black;
+}
+
+input {
+    text-align: center;
+}
+
+
+:focus {
+    color: black;
+    font-weight: bold;
+    background-color: #ffffcc;
+}
+
