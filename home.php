@@ -65,17 +65,18 @@ apply the skin class to the body tag so the changes take effect.
 
   // inizializzazione della sessione
   session_start();
+
   // controllo sul valore di sessione
   if (!isset($_SESSION['login']))
   {
     // reindirizzamento alla homepage in caso di login mancato
-    header("Location: login.php");
+   header("Location: login.php");
 
   }else{
 
     $login_id =   $_SESSION['login'];
     $login_name =  $_SESSION['name'];
-    $login_password =  $_SESSION['login_password'];
+
 
   };
 
@@ -101,9 +102,6 @@ apply the skin class to the body tag so the changes take effect.
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
 
-
-
-
               <!-- Control Sidebar Toggle Button -->
               <li>
                 <a href="Database/logout.php" ><i class="fa fa-sign-out"></i></a>
@@ -124,7 +122,7 @@ apply the skin class to the body tag so the changes take effect.
 
             <?php
 
-            include('Database/logout.php');
+            include('Database/interopMyDB.php');
 
             $rs_resultATRI = selectreq("HISTORY");
             ?>
@@ -217,8 +215,6 @@ apply the skin class to the body tag so the changes take effect.
               </div>
             </div>
 
-
-
           </div>
 
         </div>
@@ -228,7 +224,7 @@ apply the skin class to the body tag so the changes take effect.
 
   <?php
 
-//  include('subpage/modal.php');
+  include('subpage/modal.php');
 
     ?>
 

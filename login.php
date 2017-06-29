@@ -41,9 +41,9 @@
 <body class="hold-transition lockscreen">
 
   <!--  Parte di login -->
-
   <?php
   session_set_cookie_params(0);
+
   // inizializzazione della sessione
   session_start();
   // se la sessione di autenticazione
@@ -51,13 +51,15 @@
   // e il browser verrà reindirizzato alla pagina di scrittura dei post
   if (isset($_SESSION['login']))
   {
+
     // reindirizzamento alla homepage in caso di login mancato
     header("Location: home.php");
+
   }
+
   // controllo sul parametro d'invio
   if(isset($_POST['submit']) && (trim($_POST['submit']) == "Login"))
   {
-
 
     // controllo sui parametri di autenticazione inviati
     if( !isset($_POST['username']) || $_POST['username']=="" )
@@ -89,21 +91,12 @@
 
       $row_cnt = $rs_result->num_rows;
 
-      //  printf(" Result set has %d rows.\n", $row_cnt);
+      // printf(" Result set has %d rows.\n", $row_cnt);
 
-      ?>
-      <script>
-
-      alert("Errore login");
-
-      </script>
-
-      <?php
 
       // controllo sul risultato dell'interrogazione
       if($row_cnt === 0)
       {
-
 
         // reindirizzamento alla login in caso di insuccesso
         header("Location: login.php");
@@ -111,25 +104,15 @@
       }else{
 
 
-        $row = $rs_result->fetch_assoc();
+        while($row = $rs_result->fetch_assoc()) {
 
-        // echo  $row["ID"];
-        //
-        //
-        //       printf(" Result set  %d .\n",  $row["ID"]);
-        //
+          // creazione del valore di sessione
+          $_SESSION['login'] = $row["id_login"];
+          $_SESSION['name'] = $row["username_login"];
 
 
+        };
 
-        // chiamata alla funzione per l'estrazione dei dati
-        //  $res =  $data->estrai($auth);
-        // creazione del valore di sessione
-        $_SESSION['login'] = $row["id_login"];
-        $_SESSION['name'] = $row["username_login"];
-        $_SESSION['login_password'] = $row["password_login"];
-
-        // disconnessione da MySQL
-        //  $data->disconnetti();
         // reindirizzamento alla pagina di amministrazione in caso di successo
         header("Location: home.php");
       }

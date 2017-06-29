@@ -45,15 +45,9 @@
           </div>
           <label class="control-label">Categoria</label>
           <select class="form-control" name="categoria" data-dpmaxz-eid="4" required="">
-            <?php
 
-            $rs_resultSelect = selectreqCUSTOM("liste","CATEGORIA","PRODOTTI");
-            while($rowSelect = $rs_resultSelect->fetch_assoc()) {
-              ?>
-              <option value="<?echo $rowSelect["VALUE"]; ?>"><?echo $rowSelect["ALIAS"]; ?></option>
-              <?php
-            };
-            ?>
+              <!-- <option value="<?echo $rowSelect["VALUE"]; ?>"><?echo $rowSelect["ALIAS"]; ?></option> -->
+
           </select>
         </div>
 
@@ -71,7 +65,7 @@
 <!---------------------------------------------------------------------------------------------->
 
 <!-------------------------------------------MODAL MODIFICA ------------------------------------>
-<div class="modal modal-purple" id="ModalUpdate">
+<div class="modal modal-purple" id="ModalMod">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -114,22 +108,16 @@
 
             <label class="control-label">Categoria</label>
             <select class="form-control" name="categoria" data-dpmaxz-eid="4" required="">
-              <?php
 
-              $rs_resultSelect = selectreqCUSTOM("liste","CATEGORIA","PRODOTTI");
-              while($rowSelect = $rs_resultSelect->fetch_assoc()) {
-                ?>
-                <option value="<?echo $rowSelect["VALUE"]; ?>"><?echo $rowSelect["ALIAS"]; ?></option>
-                <?php
-              };
-              ?>
+                <!-- <option value="<?echo $rowSelect["VALUE"]; ?>"><?echo $rowSelect["ALIAS"]; ?></option> -->
+
             </select>
           </div>
         </div>
         <div class="modal-footer">
           <!--  <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button> -->
           <button type="submit" class="btn btn-outline" name="updateprodotto">Save changes</button>
-          <button type="submit" class="btn pull-left btn-danger"  data-dpmaxz-eid="6" name="deleteprodotto"><i class="fa fa-trash-o"></i> ELIMINA</button>
+          <!-- <button type="submit" class="btn pull-left btn-danger"  data-dpmaxz-eid="6" name="deleteprodotto"><i class="fa fa-trash-o"></i> ELIMINA</button> -->
         </div>
       </form>
     </div>
