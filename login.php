@@ -53,7 +53,7 @@
   {
 
     // reindirizzamento alla homepage in caso di login mancato
-    header("Location: home.php");
+    header("Location: pages/home.php");
 
   }
 
@@ -114,7 +114,7 @@
         };
 
         // reindirizzamento alla pagina di amministrazione in caso di successo
-        header("Location: home.php");
+        header("Location: pages/home.php");
       }
 
     }
