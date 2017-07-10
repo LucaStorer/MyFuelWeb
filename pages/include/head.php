@@ -51,10 +51,21 @@
 
 <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.it.min.js"></script>
 <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
 page. However, you can choose any other skin. Make sure you
 apply the skin class to the body tag so the changes take effect.
 -->
+
+<!-- Include Required Prerequisites -->
+
+<!-- Include Date Range Picker -->
+
+
 
 
 </head>
@@ -70,7 +81,7 @@ apply the skin class to the body tag so the changes take effect.
   if (!isset($_SESSION['login']))
   {
     // reindirizzamento alla homepage in caso di login mancato
-   header("Location: login.php");
+   header("Location: ../login.php");
 
   }else{
 

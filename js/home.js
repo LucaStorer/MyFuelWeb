@@ -25,6 +25,20 @@ $(function () {
 
   });
 
+
+
+  //Date picker
+     $('#datepicker').datepicker({
+        language: 'it',
+        todayBtn: "linked",
+         todayHighlight: true,
+         keyboardNavigation: false,
+       autoclose: true
+     });
+
+
+
+
   //evento che intercetta la selezione della riga
 //  var table = $('#dtclienti').DataTable();
 //  $('#dtclienti tbody').on('click', 'tr', function () {
@@ -35,6 +49,8 @@ $(function () {
 
 //  $('[data-toggle="tooltip"]').tooltip();
 });
+
+
 
 //evento che intercetta la finestra modale in modifica per passare i parametri
 $('#ModalMod').on('show.bs.modal', function (event) {
@@ -51,5 +67,23 @@ $('#ModalMod').on('show.bs.modal', function (event) {
   modal.find('input[name="idrecord"]').val(id)
   modal.find('input[name="nome"]').val(nome)
   modal.find('select[name="tipo"]').val(tipo)
-    modal.find('input[name="costo"]').val(costo)
-})
+  modal.find('input[name="costo"]').val(costo)
+
+});
+
+function Validate(){
+
+
+var $KmPrecedenti = document.getElementsByName('kmprecedenti')
+var $KmAttuali = document.getElementsByName('km')
+var $KmPercorsi = $KmAttuali.value - $KmPrecedenti.value
+ document.getElementsByName('kmparz').value = $KmPercorsi
+
+var $euroLitro = document.getElementsByName('kmprecedenti')
+var $euro = document.getElementsByName('kmprecedenti')
+var $Litri = 0
+var $litri100km = 0
+var $euroKm = 0
+
+
+};
