@@ -74,16 +74,40 @@ $('#ModalMod').on('show.bs.modal', function (event) {
 function Validate(){
 
 
-var $KmPrecedenti = document.getElementsByName('kmprecedenti')
-var $KmAttuali = document.getElementsByName('km')
-var $KmPercorsi = $KmAttuali.value - $KmPrecedenti.value
- document.getElementsByName('kmparz').value = $KmPercorsi
+var KmPrecedenti = document.getElementById('kmprecedenti');
+var KmAttuali = document.getElementById('km');
+var KmPercorsi = (Number(KmAttuali.value) - Number(KmPrecedenti.value));
+ document.getElementById('kmparz').value = KmPercorsi;
 
-var $euroLitro = document.getElementsByName('kmprecedenti')
-var $euro = document.getElementsByName('kmprecedenti')
-var $Litri = 0
-var $litri100km = 0
-var $euroKm = 0
 
+ //Calcola i litri
+
+ var euroLitro = document.getElementById('eurolitro');
+ var euro = document.getElementById('euro');
+ var Litri = Math.round((Number(euro.value) / Number(euroLitro.value))* 100) / 100;
+ 	document.getElementById("litri").value = Litri;
+
+
+  //Calcola i litri per 100Km
+  	var l100 = (Number(Litri) *100) / Number(KmPercorsi)
+  	document.getElementById("litri100km").value =  Math.round( l100 * 100) / 100;
+
+  	//Calcola Euro al Km
+  	var EuroKm = (Number(euro.value) / Number(KmPercorsi))
+  	document.getElementById("eurokm").value =  Math.round( EuroKm * 1000) / 1000;
+
+CheckValue();
+
+};
+
+function CheckValue(){
+
+if (document.getElementById('kmparz').value.indexOf("-") != -1){
+
+document.getElementById("insertprodotto").disabled = true;
+}else{
+document.getElementById("insertprodotto").disabled = false;
+
+}
 
 };

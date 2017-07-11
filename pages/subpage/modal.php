@@ -28,7 +28,7 @@
 
                 <div class="col-lg-6">
                   <label class="control-label">Km Attuali</label>
-                  <input type="tel" class="form-control" name="km" placeholder="0" data-dpmaxz-eid="3" required onblur="Validate();">
+                  <input type="tel" class="form-control" name="km" id="km" placeholder="0" data-dpmaxz-eid="3" required onblur="Validate();">
                 </div>
 
               </div>
@@ -37,11 +37,11 @@
 
                 <div class="col-lg-6">
                   <label class="control-label">€\litro</label>
-                  <input type="number" step="0.001" class="form-control" name="eurolitro" placeholder="1,..." data-dpmaxz-eid="3" required onblur="Validate();">
+                  <input type="number" step="0.001" class="form-control" name="eurolitro" id="eurolitro" placeholder="1,..." data-dpmaxz-eid="3" required onblur="Validate();">
                 </div>
                 <div class="col-lg-6">
                   <label class="control-label">Totale €</label>
-                  <input type="number" step="0.001" class="form-control" name="euro" placeholder="0" data-dpmaxz-eid="3" required onblur="Validate();">
+                  <input type="number" step="0.001" class="form-control" name="euro" id="euro" placeholder="0" data-dpmaxz-eid="3" required onblur="Validate();">
                 </div>
 
               </div>
@@ -56,7 +56,7 @@
                   while($rowSelect = $rs_resultSelect->fetch_assoc()) {
                     ?>
                     <label class="control-label">Km Precedenti</label>
-                    <input type="text" class="form-control" name="kmprecedenti" placeholder="kmprecedenti" readonly="true" data-dpmaxz-eid="3" value="<?echo $rowSelect["KMTOT"]; ?>">
+                    <input type="text" class="form-control" name="kmprecedenti" id="kmprecedenti" placeholder="kmprecedenti" readonly="true" data-dpmaxz-eid="3" value="<?echo $rowSelect["KMTOT"]; ?>">
                     <?php
                   };
                   ?>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-lg-6">
                   <label class="control-label">Km Percorsi</label>
-                  <input type="tel" class="form-control" name="kmparz" placeholder="0" data-dpmaxz-eid="3" readonly="true">
+                  <input type="tel" class="form-control" name="kmparz" id="kmparz" placeholder="0" data-dpmaxz-eid="3" readonly="true">
                 </div>
 
               </div>
@@ -73,15 +73,15 @@
 
                 <div class="col-lg-4">
                   <label class="control-label">Litri</label>
-                  <input type="number" step="0.001" class="form-control" name="litri" placeholder="0" data-dpmaxz-eid="3" readonly>
+                  <input type="number" step="0.001" class="form-control" name="litri" id="litri" placeholder="0" data-dpmaxz-eid="3" readonly>
                 </div>
                 <div class="col-lg-4">
                   <label class="control-label">l\100Km</label>
-                  <input type="number" step="0.001" class="form-control" name="litri100km" placeholder="0" data-dpmaxz-eid="3" readonly>
+                  <input type="number" step="0.001" class="form-control" name="litri100km" id="litri100km" placeholder="0" data-dpmaxz-eid="3" readonly>
                 </div>
                 <div class="col-lg-4">
                   <label class="control-label">€\Km</label>
-                  <input type="number" step="0.001" class="form-control" name="eurokm" placeholder="0" data-dpmaxz-eid="3" readonly>
+                  <input type="number" step="0.001" class="form-control" name="eurokm" id="eurokm" placeholder="0" data-dpmaxz-eid="3" readonly>
                 </div>
 
               </div>
@@ -91,7 +91,7 @@
 
           <div class="modal-footer">
             <!--  <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button> -->
-            <button type="submit" class="btn btn-outline" name="insertprodotto">Salva</button>
+            <button type="submit" class="btn btn-outline" name="insertprodotto" id="insertprodotto" disabled="true">Salva</button>
           </div>
         </form>
       </div>
