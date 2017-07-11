@@ -34,6 +34,9 @@ include('include/head.php');
                     <th style="width:5px"></th>
                     <th style="width:5px"></th>
                     <th>
+                      ID
+                    </th>
+                    <th>
                       Data
                     </th>
                     <th>
@@ -70,7 +73,7 @@ include('include/head.php');
                     <tr>
 
                       <td>
-                        <button type="button" class="btn pull-default btn-danger btn-xs" style="color:white;" href="#" onclick="deleterecordAttRis(<? echo $idat; ?> ,<? echo $rowATRI["ID_RISORSA"]; ?>);return false;">
+                        <button type="button" class="btn pull-default btn-danger btn-xs" style="color:white;" href="#" onclick="deleterecord(<? echo $rowATRI["ID"]; ?>);return false;">
                           <i class="fa fa-times fa-fw"></i>
                         </button>
                       </td>
@@ -84,6 +87,9 @@ include('include/head.php');
                         <i class="fa fa-edit fa-fw"></i>
                       </button>
 
+                    </td>
+                    <td>
+                      <? echo $rowATRI["ID"]; ?>
                     </td>
                     <td>
                       <?  echo $rowATRI["DATA"]; ?>

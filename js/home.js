@@ -111,3 +111,30 @@ document.getElementById("insertprodotto").disabled = false;
 }
 
 };
+
+function deleterecord(ID) {
+  var agree=confirm("ATTENZIONE! Sicuro di voler cancellare il Record? NON SARANNO RECUPERABILI!");
+  if (agree)
+  {
+//alert(ID);
+    console.log(ID);
+    //alert("tablename=attivitaprodotto&"+"idattivita="+ID_ATT+"&idprodotto="+ID_PROD);
+  //  console.log("tablename=attivitarisorsa&"+"idattivita="+ID_INT+"&idrisorsa="+ID_COST);
+    $.ajax({
+      type: "POST",
+      url: "../Database/interopMyDB.php",
+      data: "delete=HISTORY&"+"ID="+ID,
+      success: function(msg){
+        alert( msg );
+        location.reload(true);
+        // body.append(data);
+      },
+      error: function ( xhr ) {
+        alert( xhr );
+      }
+    });
+  }  else
+  {
+    return false ;
+  }
+};

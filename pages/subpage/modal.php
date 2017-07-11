@@ -10,7 +10,7 @@
           <h4 class="modal-title">Nuovo Rifornimento</h4>
         </div>
         <div class="modal-body">
-          <form role="form" data-dpmaxz-eid="1" action="Database/interopMyDB.php" name="insert" method="post">
+          <form role="form" data-dpmaxz-eid="1" action="../Database/interopMyDB.php" name="insertprodotto" method="post">
 
             <div class="form-group">
 
