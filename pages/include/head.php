@@ -64,6 +64,8 @@ apply the skin class to the body tag so the changes take effect.
 <!-- Include Required Prerequisites -->
 
 <!-- Include Date Range Picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
 
 
 
