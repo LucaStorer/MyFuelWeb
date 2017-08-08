@@ -1,5 +1,25 @@
-<canvas id="myChart" width="400" height="400"></canvas>
-<script>
+
+   <div class="col-lg-12">
+<div class="box box-solid box-purple">
+  <div class="box-header">
+    <h3 class="box-title">Rifornimenti</h3>
+    <!-- <button type="button" class="btn pull-right btn-purple btn-xs" data-toggle="modal" data-target="#ModalNew"><i class="fa fa-plus-circle"></i> Aggiungi</button> -->
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+
+<canvas id="myChart" width="auto" height="auto"></canvas>
+</div>
+</div>
+</div>
+
+
+
+   <div class="col-lg-12">
+    </div>
+
+<script type="text/javascript" src="../js/statistics.js"></script>
+<!-- <script>
 var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -37,4 +57,4 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-</script>
+</script> -->

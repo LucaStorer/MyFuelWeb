@@ -18,9 +18,9 @@ $rs_resultATRI = selectreq("HISTORY");
         <tr>
           <th style="width:5px"></th>
           <th style="width:5px"></th>
-          <th>
+          <!-- <th>
             ID
-          </th>
+          </th> -->
           <th>
             Data
           </th>
@@ -73,9 +73,9 @@ $rs_resultATRI = selectreq("HISTORY");
             </button>
 
           </td>
-          <td>
+          <!-- <td>
             <? echo $rowATRI["ID"]; ?>
-          </td>
+          </td> -->
           <td>
             <?  echo $rowATRI["DATA"]; ?>
           </td>

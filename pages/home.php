@@ -19,7 +19,7 @@ include('include/head.php');
 
          </ul>
 
-         <div class="tab-content">
+         <div class="tab-content" style="padding:15px;">
            <div id="home" class="tab-pane fade in active">
 
              <div class="col-lg-12">
